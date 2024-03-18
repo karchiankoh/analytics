@@ -1,0 +1,26 @@
+@startuml
+
+rectangle Main
+
+rectangle DataProcessor
+
+rectangle CityAmtDao
+rectangle CityDistrictDao
+rectangle OrderDao
+rectangle TimeDao
+
+rectangle DataSource
+
+Main --> DataProcessor
+
+DataProcessor --> CityAmtDao
+DataProcessor --> CityDistrictDao
+DataProcessor --> OrderDao
+DataProcessor --> TimeDao
+
+CityAmtDao --> DataSource
+CityDistrictDao --> DataSource
+OrderDao --> DataSource
+TimeDao --> DataSource
+
+@enduml
